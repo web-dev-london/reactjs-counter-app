@@ -20,14 +20,14 @@ class Counter extends Component {
         fontSize: 14
     }
 
-    constructor(){
-        super();
-        this.handleIncrement = this.handleIncrement.bind(this)
-    }
+    // constructor(){
+    //     super();
+    //     this.handleIncrement = this.handleIncrement.bind(this)
+    // }
 
 
 
-    handleIncrement(){
+    handleIncrement =() => {
         console.log('Increment Clicked',this);
         // obj.method() reference to this object
         // function() reference to window obj

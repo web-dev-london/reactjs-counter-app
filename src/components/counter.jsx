@@ -20,23 +20,15 @@ class Counter extends Component {
         fontSize: 14
     }
 
-    // constructor(){
-    //     super();
-    //     this.handleIncrement = this.handleIncrement.bind(this)
-    // }
-
-
-
-    handleIncrement =() => {
-        console.log('Increment Clicked',this);
-        // obj.method() reference to this object
-        // function() reference to window obj
-    }
+    handleIncrement = product => {
+        console.log(product);
+        this.setState({count: this.state.count + 1});
+    };
 
     render() { 
         return <>
             <span style={this.style} className={this.getBadgeClasses()}>{this.formatCount()}</span>
-            <button onClick={this.handleIncrement} style={this.btnStyle} className='btn btn-secondary btn-sm'>Increment</button>
+            <button onClick={()=> this.handleIncrement({id: 1})} style={this.btnStyle} className='btn btn-secondary btn-sm'>Increment</button>
         </>
     }
 
